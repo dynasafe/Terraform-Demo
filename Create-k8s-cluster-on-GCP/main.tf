@@ -14,6 +14,11 @@ resource "google_compute_instance" "control-plane" {
   machine_type = "e2-mediam" # 2core/4GB
   zone         = "us-central1"
 
+  network_interface {
+    network = "default"
+    access_config {
+    }
+  }
 
   boot_disk {
     initialize_params {
@@ -28,6 +33,12 @@ resource "google_compute_instance" "worker-node" {
   name         = "terraform-version-control-${count.index}"
   machine_type = "custom-1-4096" # 1core/4GB
   zone         = "asia-east1-a"
+
+  network_interface {
+    network = "default"
+    access_config {
+    }
+  }
 
   boot_disk {
     initialize_params {
