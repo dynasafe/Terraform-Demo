@@ -14,5 +14,7 @@ This demo shows how to build a Kubernetes cluster using cloud resources.
 
 Of course, you can have better options in the cloud, such as GKE, EKS
 
+This is the practice of the following website: https://learn.hashicorp.com/tutorials/terraform/kubernetes-provider?in=terraform/kubernetes
+
 ## 2. Add worker node to existing cluster
 Terraform is the best choice if you want to quickly build multiple virtual machines with similar functions
