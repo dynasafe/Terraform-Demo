@@ -11,7 +11,7 @@ resource "google_compute_instance" "control-plane" {
   count        = 1
 
   name         = "k8s-control-plane-${count.index}"
-  machine_type = "e2-mediam" # 2core/4GB
+  machine_type = "e2-median" # 2core/4GB
   zone         = "us-central1"
 
   network_interface {
@@ -32,7 +32,7 @@ resource "google_compute_instance" "worker-node" {
 
   name         = "k8s-worker-node-${count.index}"
   machine_type = "custom-1-4096" # 1core/4GB
-  zone         = "asia-east1-a"
+  zone         = "us-central1"
 
   network_interface {
     network = "default"
