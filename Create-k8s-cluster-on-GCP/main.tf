@@ -26,7 +26,7 @@ resource "google_compute_instance" "control-plane" {
     }
   }
 }
-
+f
 resource "google_compute_instance" "worker-node" {
   count        = 2
 
