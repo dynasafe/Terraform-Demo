@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    ansible = {
+      source = "nbering/ansible"
+      version = "1.0.4"
+    }
+  }
+}
+
 provider "google" {
   project = "openshift-build-354002"
 }
